@@ -24,3 +24,5 @@ npm i remark@13 remark-html@13
 ```
 
 驚いたことに、remark,remark-htmlは最新バージョンの14だとエラーになる
+
+Next.jsのページでは<html>や<body>などの基本的なマークアップはデフォルトで書かなくてよい設定になっています。

@@ -10,23 +10,18 @@ import Date from "../components/date"
 export default function Home({ allPostsData }) {
   return (
     <Layout>
-      <div>
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <div>
-                <Date dateString={date} />
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-
+			{allPostsData.map(({ id, date, title }) => (
+				<h3 key={id} className="c-flex">
+					<div className="date">
+						<Date dateString={date} />
+					</div>
+					<div className="title">
+						<Link href={`/posts/${id}`}>
+							<a>{title}</a>
+						</Link>
+					</div>
+				</h3>
+			))}
     </Layout>
   )
 }
